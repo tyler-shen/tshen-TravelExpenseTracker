@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Destination" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/destination"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Reason" />
+    
+	<TextView
+	    android:id="@+id/datestart"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/reason"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginTop="5dp"
+	    android:text="Date from"
+	    android:textStyle="bold" />
+    
+	<DatePicker
+	    android:id="@+id/startdate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/datestart"
+	    android:layout_centerHorizontal="true"
+	    android:calendarViewShown="false" />
+	
+	<TextView
+	    android:id="@+id/dateend"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/startdate"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:text="Date to"
+	    android:textStyle="bold" />
+	
+	<DatePicker
+	    android:id="@+id/enddate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/dateend"
+	    android:layout_centerHorizontal="true"
+	    android:calendarViewShown="false" />
+
+	<Button
+	    android:id="@+id/submitclaim"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:text="Submit" />
+	
+</RelativeLayout>

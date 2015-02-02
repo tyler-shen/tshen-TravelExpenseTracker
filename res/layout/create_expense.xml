@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView
+	    android:id="@+id/expensedatetext"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:text="Date"
+	    android:textStyle="bold" />
+	
+	<DatePicker
+	    android:id="@+id/expensedate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:calendarViewShown="false" />
+    
+    <EditText
+        android:id="@+id/expensecategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/expensedate"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Category" />
+    
+	<TextView
+	    android:id="@+id/amountspenttext"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_below="@id/expensecategory"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+	    android:text="Amount spent:"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/amountspent"
+	    android:layout_width="200dp"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/amountspenttext"
+	    android:layout_below="@id/expensecategory"
+	    android:layout_marginLeft="10dp"
+	    android:ems="10"
+	    android:inputType="numberDecimal" >
+
+	    <requestFocus />
+	</EditText>
+	
+	<TextView
+	    android:id="@+id/unitofcurrencytext"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_below="@id/amountspenttext"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="10dp"
+	    android:text="Unit of currency:"
+	    android:textStyle="bold" />
+	
+    <EditText
+        android:id="@+id/unitofcurrency"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/unitofcurrencytext"
+        android:layout_below="@+id/amountspent"
+        android:layout_marginLeft="10dp"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/expensedescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/unitofcurrencytext"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Description" />
+
+	<Button
+	    android:id="@+id/saveexpense"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:text="Save the expense" />
+    
+</RelativeLayout>

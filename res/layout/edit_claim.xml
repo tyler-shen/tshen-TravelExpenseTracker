@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+    android:id="@+id/destinationshow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:layout_alignParentLeft="true"
+	android:textSize="20sp"
+    android:text="Destination" />
+    
+    <TextView
+    android:id="@+id/traveldateshow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/destinationshow"
+	android:layout_alignParentLeft="true"
+	android:textSize="20sp"
+    android:text="Date range" />
+    
+    <TextView
+    android:id="@+id/descriptionshow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/traveldateshow"
+	android:layout_alignParentLeft="true"
+	android:textSize="20sp"
+    android:text="Description" />
+    
+    <TextView
+    android:id="@+id/expensetext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/descriptionshow"
+    android:layout_centerHorizontal="true"
+    android:text="Expense list" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false" >
+
+        <ListView
+            android:id="@+id/expenselist"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_marginTop="85dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" >
+        </ListView>
+    </LinearLayout>
+</ScrollView>
+    
+	<Button
+	    android:id="@+id/addexpense"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/expensetext"
+        android:layout_alignLeft="@id/expensetext"
+        android:layout_marginTop="225dp"
+        android:layout_centerHorizontal="true"
+        android:text="Add an expense item" />
+
+	<Button
+	    android:id="@+id/editclaim"
+        android:layout_width="160dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/expensetext"
+        android:layout_alignLeft="@id/expensetext"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        android:text="Edit the claim" />
+	
+	<Button
+	    android:id="@+id/approveclaim"
+        android:layout_width="160dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/expensetext"
+        android:layout_alignRight="@id/expensetext"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        android:text="Approve the claim" />
+	
+	<Button
+	    android:id="@+id/emailclaim"
+        android:layout_width="160dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/editclaim"
+        android:layout_alignLeft="@id/expensetext"
+        android:layout_centerHorizontal="true"
+        android:text="Email the claim" />
+	
+	<Button
+	    android:id="@+id/deleteclaim"
+        android:layout_width="160dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/approveclaim"
+        android:layout_alignRight="@id/expensetext"
+        android:layout_centerHorizontal="true"
+        android:text="Delete the claim" />
+	
+</RelativeLayout>
